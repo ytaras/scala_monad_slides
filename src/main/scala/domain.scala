@@ -23,6 +23,12 @@ object ShowDomain extends App {
     ))
   )
 
+  println("Example using java-style iteration")
   println(JavaStyleIteratorExample.getUserNames(sampleData))
   println(JavaStyleIteratorExample.getUserPhones(sampleData))
+  println("Example using scala giher order iteration")
+  println(MapExample.getUserNames(sampleData))
+  println(MapExample.getUserNamesLambda(sampleData))
+  println(MapExample.getUserNamesShorterLambda(sampleData))
+  println(MapExample.getUserPhones(sampleData))
 }
