@@ -18,6 +18,10 @@ object ShowDomain extends App {
     ))
   )
 
+  import scala.collection.JavaConversions._
+  println("Example using java iteration")
+  println(JavaIterableExample.getUserNames(sampleData))
+  println(JavaIterableExample.getUserNames5(sampleData))
   println("Example using java-style iteration")
   println(JavaStyleIteratorExample.getUserNames(sampleData))
   println(JavaStyleIteratorExample.getUserPhones(sampleData))

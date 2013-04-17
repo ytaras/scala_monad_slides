@@ -12,9 +12,9 @@ object MapExample {
 
   def addressToPhones(address: Address): List[String] = address.phones map { _.full }
   def personToPhones(person: Person): List[String] =
+      //person.property map addressToPhones
      // [error]  found   : List[List[String]]
      // [error]  required: List[String]
-     // person.property map addressToPhones
      person.property flatMap addressToPhones
 
   def getUserPhones(people: List[Person]): List[String] =
