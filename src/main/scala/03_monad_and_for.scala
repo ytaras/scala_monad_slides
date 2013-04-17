@@ -9,7 +9,7 @@ trait ScalaMonad[A] {
   def flatMap[B](flatMapper: A => ScalaMonad[B]): ScalaMonad[B]
   def map[B](mapper: A => B): ScalaMonad[B]
   // Nice feature, but won't be covered in scope of presentation
-  def filter(predicate: A => Boolean): ScalaMonad[A]
+  //def filter(predicate: A => Boolean): ScalaMonad[A]
 }
 
 object ForExample {

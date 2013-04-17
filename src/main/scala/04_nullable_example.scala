@@ -1,7 +1,4 @@
-object Nullable {
-  case class Issue(releaseId: Int)
-  case class Release(managerId: Int)
-  case class Manager(name: String)
+object NullableExample {
 
   object Repository {
     def issue(id: Int): Issue = if (id == 123) Issue(23) else null

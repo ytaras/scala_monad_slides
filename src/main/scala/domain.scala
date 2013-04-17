@@ -4,3 +4,6 @@ case class Phone(code: Int, phone: Int) {
   val full = "(%03d) %07d" format (code, phone)
 }
 
+case class Issue(releaseId: Int)
+case class Release(managerId: Int)
+case class Manager(name: String)
