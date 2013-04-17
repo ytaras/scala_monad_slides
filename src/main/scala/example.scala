@@ -40,4 +40,11 @@ object ShowDomain extends App {
   println(OptionExample.managerNameForIssueMap(123))
   println(OptionExample.managerNameForIssueFor(23))
   println(OptionExample.managerNameForIssueFor(123))
+  println("Example using exception handling")
+  try {
+    println(ExceptionsExample.managerNameForIssue(123))
+    println(ExceptionsExample.managerNameForIssue(23))
+  } catch {
+    case e: Exception => println(e)
+  }
 }
