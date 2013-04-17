@@ -5,7 +5,7 @@ object MapExample {
   def getUserNames(people: List[Person]) =
     people map userToName
   def getUserNamesLambda(people: List[Person]) =
-    people map { x => x.name }
+    people map { person => person.name }
   def getUserNamesShorterLambda(people: List[Person]) =
     people map { _.name }
 
