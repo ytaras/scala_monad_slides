@@ -19,4 +19,10 @@ object MapExample {
 
   def getUserPhones(people: List[Person]): List[String] =
     people flatMap personToPhones
+
+  def getUserPhonesLambdas(people: List[Person]): List[String] =
+    people                      flatMap {
+    person => person.property   flatMap {
+    address => address.phones   map {
+    phone => phone.full         } } }
 }

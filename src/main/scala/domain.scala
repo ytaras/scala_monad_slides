@@ -31,4 +31,5 @@ object ShowDomain extends App {
   println(MapExample.getUserNamesLambda(sampleData))
   println(MapExample.getUserNamesShorterLambda(sampleData))
   println(MapExample.getUserPhones(sampleData))
+  println(MapExample.getUserPhonesLambdas(sampleData))
 }
