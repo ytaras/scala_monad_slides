@@ -6,7 +6,7 @@ case class MySome[A](value: A) extends MyOption[A] {
   def flatMap[B](f: A => MyOption[B]) = f(value)
   def map[B](f: A => B) = MySome(f(value))
 }
-case class MyNone[A] extends MyOption[A] {
+case class MyNone[A]() extends MyOption[A] {
   def flatMap[B](f: A => MyOption[B]) = MyNone[B]
   def map[B](f: A => B) = MyNone[B]
 }
