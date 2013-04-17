@@ -37,7 +37,7 @@ object ShowDomain extends App {
   println(OptionExample.managerNameForIssue(23))
   println(OptionExample.managerNameForIssue(123))
   println(OptionExample.managerNameForIssueMap(23))
-  println(OptionExample.managerNameForIssueMap(23))
-  //println(OptionExample.managerNameForIssueFor(123))
-  //println(OptionExample.managerNameForIssueFor(123))
+  println(OptionExample.managerNameForIssueMap(123))
+  println(OptionExample.managerNameForIssueFor(23))
+  println(OptionExample.managerNameForIssueFor(123))
 }

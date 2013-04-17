@@ -33,8 +33,15 @@ object OptionExample {
   }
 
   def managerNameForIssueMap(id: Int): MyOption[String] =
-    mIssue(id) flatMap {
-      issue    =>       mRelease(issue.releaseId) flatMap {
-      release  =>       mManager(release.managerId) map {
-      manager  =>       manager.name  } } }
+    mIssue(id)                  flatMap { issue    =>
+    mRelease(issue.releaseId)   flatMap { release  =>
+    mManager(release.managerId) map     { manager  =>
+    manager.name  } } }
+
+
+  def managerNameForIssueFor(id: Int): MyOption[String] = for {
+    issue   <- mIssue(id)
+    release <- mRelease(issue.releaseId)
+    manager <- mManager(release.managerId)
+  } yield manager.name
 }
