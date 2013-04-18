@@ -51,4 +51,7 @@ object ShowDomain extends App {
   } catch {
     case e: Exception => println(e)
   }
+  println("Example using exception handling")
+  println(ValidationExample.managerNameForIssue(123))
+  println(ValidationExample.managerNameForIssue(23))
 }
