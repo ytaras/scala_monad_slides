@@ -15,7 +15,7 @@ object ExceptionsExample {
 
   import Repository._
 
-  def managerNameForIssue(id: Int) = {
+  def managerNameForIssue(id: Int): String = {
     val issue   = eIssue(id)
     val release = eRelease(issue.releaseId)
     val manager = eManager(release.managerId)
